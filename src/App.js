@@ -10,6 +10,8 @@ export default class App extends Component {
       <div>
         <h1>Where is it sunny?</h1>
         <Search />
+        <br />
+        <br />
         <Main />
         <h2>Need Inspiration?</h2>
         <City />
