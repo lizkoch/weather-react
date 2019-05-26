@@ -1,25 +1,43 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export default class App extends Component {
+export default class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: ""
+    };
+  }
+
+  _handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  _handleSubmit(event) {
+    event.preventDefault();
+    this.props.updateForm(this.state.value);
+    console.log(this.state.value);
+  }
+
   render() {
     return (
       <div>
-        <form class="clearfix float-left" id="weather-search-form">
-          <div class="form-group float-left">
+        <form onSubmit={event => this._handleSubmit(event)}>
+          <div className="form-group float-left">
             <input
               type="text"
               placeholder="Which city is calling you?"
               autocomplete="off"
-              class="form-control"
+              className="form-control"
               id="weather-search-text-input"
             />
           </div>
-          <input type="submit" value="Search" class="btn btn-info float-left" />
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-info float-left"
+          />
         </form>
-        <button id="current-location-button" class="btn btn-primary float-left">
-          Your Location
-        </button>
       </div>
     );
   }

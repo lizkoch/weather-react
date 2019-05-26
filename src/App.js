@@ -5,14 +5,18 @@ import Main from "./Main";
 import Search from "./Search";
 
 export default class App extends Component {
+  refresh() {
+    return "New York";
+  }
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <h1>Where is it sunny?</h1>
         <Search />
         <br />
-        <br />
-        <Main />
+        <div>
+          <Main city="New York" />
+        </div>
         <h2>Need Inspiration?</h2>
         <City />
         <City />
