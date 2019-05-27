@@ -28,7 +28,7 @@ export default class Search extends Component {
             <input
               type="text"
               placeholder="Which city is calling you?"
-              autocomplete="off"
+              autoComplete="off"
               className="form-control"
               id="weather-search-text-input"
             />

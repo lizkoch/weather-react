@@ -12,8 +12,7 @@ export default class App extends Component {
     return (
       <div className="container-fluid">
         <h1>Where is it sunny?</h1>
-        <Search />
-        <br />
+
         <div>
           <Main city="New York" />
         </div>
