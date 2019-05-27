@@ -39,6 +39,8 @@ export default class Search extends Component {
             className="btn btn-info float-left"
           />
         </form>
+        <br />
+        <br />
       </div>
     );
   }

@@ -44,11 +44,10 @@ export default class Main extends Component {
       <div className="main-weather">
         <Search loadWeather={this.getWeather} />
         <h2>{this.state.city}</h2>
-        <p className="main-date">Time</p>
         <p className="main-description">{this.state.description}</p>
         <p className="main-humidity">Chance of rain: {this.state.humidity}</p>
-        <p className="main-sunrise">{this.state.sunrise}</p>
-        <p className="main-sunset">{this.state.sunset}</p>
+        <p className="main-sunrise">Sunrise: {this.state.sunrise}</p>
+        <p className="main-sunset">Sunset: {this.state.sunset}</p>
       </div>
     );
   }
