@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import axios from "axios";
 
 export default class Search extends Component {
@@ -22,7 +23,7 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={event => this._handleSubmit(event)}>
+        <form onSubmit={this.props.loadWeather}>
           <div className="form-group float-left">
             <input
               type="text"
