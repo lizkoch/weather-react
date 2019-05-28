@@ -18,8 +18,8 @@ export default class App extends Component {
         </div>
         <h2>Need Inspiration?</h2>
         <City cityName="Lisbon, Portugal" cityURL="lisbon" />
-        <City />
-        <City />
+        <City cityName="Cape Town, South Africa" cityURL="cape%20town" />
+        <City cityName="Sydney, Australia" cityURL="sydney" />
         <PersonList />
       </div>
     );
