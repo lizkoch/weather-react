@@ -16,15 +16,15 @@ export default class City extends Component {
     let root = "https://api.openweathermap.org/data/2.5";
     let path = "weather";
     let units = "metric";
-    let params = `?${cityURL}&appid=${Api_Key}&units=${units}`;
+    let params = `?q=${this.state.cityURL}&appid=${Api_Key}&units=${units}`;
     let url = `${root}/${path}${params}`;
     axios.get(url).then(response => console.log(response));
   };
 
   render() {
+    this.getCityWeather();
     return (
       <div>
-        {this.getCityWeather}
         <h2>{this.props.cityName}</h2>
         <p>This is the URL: {this.props.cityURL}</p>
         <p>Do little parts work? Like {this.state.root}</p>
