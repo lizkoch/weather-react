@@ -24,7 +24,8 @@ export default class City extends Component {
   render() {
     return (
       <div>
-        {this.getCityWeather};<h2>{this.props.cityName}</h2>
+        {this.getCityWeather}
+        <h2>{this.props.cityName}</h2>
         <p>This is the URL: {this.props.cityURL}</p>
         <p>Do little parts work? Like {this.state.root}</p>
       </div>

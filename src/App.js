@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import City from "./Components/City";
 import Main from "./Components/Main";
-import PersonList from "./Components/PersonList";
 
 export default class App extends Component {
   refresh() {
@@ -20,7 +19,6 @@ export default class App extends Component {
         <City cityName="Lisbon, Portugal" cityURL="lisbon" />
         <City cityName="Cape Town, South Africa" cityURL="cape%20town" />
         <City cityName="Sydney, Australia" cityURL="sydney" />
-        <PersonList />
       </div>
     );
   }
