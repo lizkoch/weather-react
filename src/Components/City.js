@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
@@ -27,6 +26,7 @@ export default class City extends Component {
       <div>
         {this.getCityWeather};<h2>{this.props.cityName}</h2>
         <p>This is the URL: {this.props.cityURL}</p>
+        <p>Do little parts work? Like {this.state.root}</p>
       </div>
     );
   }

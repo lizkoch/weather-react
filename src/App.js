@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import City from "./City";
-import Main from "./Main";
-import Search from "./Search";
+import City from "./Components/City";
+import Main from "./Components/Main";
+import PersonList from "./Components/PersonList";
 
 export default class App extends Component {
   refresh() {
@@ -20,6 +20,7 @@ export default class App extends Component {
         <City cityName="Lisbon, Portugal" cityURL="lisbon" />
         <City />
         <City />
+        <PersonList />
       </div>
     );
   }
