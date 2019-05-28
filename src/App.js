@@ -14,10 +14,13 @@ export default class App extends Component {
         <h1>Where is it sunny?</h1>
 
         <div>
-          <Main city="New York" />
+          <Main />
         </div>
         <h2>Need Inspiration?</h2>
-        <City />
+        <City
+          cityName="Lisbon, Portugal"
+          cityURL="https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+        />
         <City />
         <City />
       </div>
