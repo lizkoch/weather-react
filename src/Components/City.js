@@ -23,12 +23,16 @@ export default class City extends Component {
 
   render() {
     this.getCityWeather();
-    return (
-      <div>
-        <h2>{this.props.cityName}</h2>
-        <p>This is the URL: {this.props.cityURL}</p>
-        <p>Do little parts work? Like {this.state.root}</p>
-      </div>
-    );
+    if (this.state.loaded) {
+      return (
+        <div>
+          <h2>{this.props.cityName}</h2>
+          <p>This is the URL: {this.props.cityURL}</p>
+          <p>Do little parts work? Like {this.state.root}</p>
+        </div>
+      );
+    } else {
+      return <div>Loading...</div>;
+    }
   }
 }

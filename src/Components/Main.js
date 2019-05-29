@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Search from "./Search";
+import Search from "./Components/Search";
 
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
@@ -17,22 +17,27 @@ export default class Main extends Component {
     const city = e.target.elements.city.value;
     e.preventDefault();
     const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_Key}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_Key}&units=metric`
     );
     const response = await api_call.json();
     console.log(response);
 
-    this.setState({
-      loaded: true,
-      temperature: response.main.temp,
-      city: response.name,
-      humidity: response.main.humidity,
-      description: response.weather[0].description,
-      sunrise: response.data.sys.sunrise,
-      sunset: response.data.sys.sunset,
-      icon: response.data.weather[0].icon,
-      error: ""
-    });
+    if (city) {
+      this.setState({
+        temperature: response.main.temp,
+        city: response.name,
+        humidity: response.main.humidity,
+        description: response.weather[0].description,
+        sunrise: response.data.sys.sunrise,
+        sunset: response.data.sys.sunset,
+        icon: response.data.weather[0].icon,
+        error: ""
+      });
+    } else {
+      this.setState({
+        error: "Please search for a city."
+      });
+    }
   };
 
   render() {
@@ -50,24 +55,7 @@ export default class Main extends Component {
     } else {
       return (
         <div>
-          <form onSubmit={this.props.loadWeather}>
-            <div className="form-group float-left">
-              <input
-                type="text"
-                placeholder="Which city is calling you?"
-                autoComplete="off"
-                className="form-control"
-                id="weather-search-text-input"
-              />
-            </div>
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-info float-left"
-            />
-          </form>
-          <br />
-          <br />
+          <Search />
         </div>
       );
     }

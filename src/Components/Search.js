@@ -1,24 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 export default class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ""
-    };
-  }
-
-  _handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  _handleSubmit(event) {
-    event.preventDefault();
-    this.props.updateForm(this.state.value);
-    console.log(this.state.value);
-  }
-
   render() {
     return (
       <div>
