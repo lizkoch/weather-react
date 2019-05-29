@@ -21,13 +21,13 @@ class App extends React.Component {
     const country = e.target.elements.country.value;
     e.preventDefault();
     const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}&units=metric`
     );
     const response = await api_call.json();
     console.log(response);
     if (city && country) {
       this.setState({
-        temperature: response.main.temp,
+        temperature: Math.round(response.main.temp),
         city: response.name,
         country: response.sys.country,
         humidity: response.main.humidity,
@@ -36,7 +36,7 @@ class App extends React.Component {
       });
     } else {
       this.setState({
-        error: "Please input search values..."
+        error: "Please enter a city and country"
       });
     }
   };
