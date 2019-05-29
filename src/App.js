@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import City from "./City";
 import Main from "./Main";
@@ -36,6 +36,7 @@ class App extends React.Component {
         description: response.weather[0].description,
         sunrise: response.sys.sunrise,
         sunset: response.sys.sunset,
+        icon: response.weather[0].icon,
         error: ""
       });
     } else {
@@ -63,9 +64,27 @@ class App extends React.Component {
                     country={this.state.country}
                     humidity={this.state.humidity}
                     description={this.state.description}
+                    sunrise={this.state.sunrise}
+                    sunset={this.state.sunset}
                     error={this.state.error}
                   />
                 </div>
+                <h2>Need inspiration?</h2>
+                <City
+                  loadWeather={this.getWeather}
+                  cityName="Lisbon, Portugal"
+                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                />
+                <City
+                  loadWeather={this.getWeather}
+                  cityName="Cape Town, South Africa"
+                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=cape%20town&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                />
+                <City
+                  loadWeather={this.getWeather}
+                  cityName="Sydney, Australia"
+                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=sydney&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                />
               </div>
             </div>
           </div>

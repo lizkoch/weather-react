@@ -7,7 +7,7 @@ export default class Search extends React.Component {
         <form onSubmit={this.props.loadWeather}>
           <input type="text" name="city" placeholder="City..." />
           <input type="text" name="country" placeholder="Country..." />
-          <button className=" btn btn-info float-left">Search</button>
+          <button className=" btn btn-info">Search</button>
         </form>
 
         <br />
