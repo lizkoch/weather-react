@@ -2,54 +2,47 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Search";
 
-const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
-
-export default class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loaded: false,
-      city: this.props.city
-    };
-  }
-
-  getWeather = async e => {
-    const city = e.target.elements.city.value;
-    e.preventDefault();
-    const api_call = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_Key}&units=metric`
-    );
-    const response = await api_call.json();
-    console.log(response);
-
-    if (city) {
-      this.setState({
-        temperature: response.main.temp,
-        city: response.name,
-        humidity: response.main.humidity,
-        description: response.weather[0].description,
-        sunrise: response.data.sys.sunrise,
-        sunset: response.data.sys.sunset,
-        icon: response.data.weather[0].icon,
-        error: ""
-      });
-    } else {
-      this.setState({
-        error: "Please search for a city."
-      });
-    }
-  };
-
+class Main extends Component {
   render() {
     return (
-      <div className="main-weather">
-        <Search loadWeather={this.getWeather} />
-        <h2>{this.state.city}</h2>
-        <p className="main-description">{this.state.description}</p>
-        <p className="main-humidity">Chance of rain: {this.state.humidity}</p>
-        <p className="main-sunrise">Sunrise: {this.state.sunrise}</p>
-        <p className="main-sunset">Sunset: {this.state.sunset}</p>
+      <div className="weather-info">
+        {this.props.country && this.props.city && (
+          <p className="weather__key">
+            Location:
+            <span className="weather__value">
+              {" "}
+              {this.props.city}, {this.props.country}
+            </span>
+          </p>
+        )}
+
+        {this.props.temperature && (
+          <p className="weather__key">
+            Temperature:
+            <span className="weather__value"> {this.props.temperature}</span>
+          </p>
+        )}
+
+        {this.props.humidity && (
+          <p className="weather__key">
+            Humidity:
+            <span className="weather__value"> {this.props.humidity}</span>
+          </p>
+        )}
+
+        {this.props.description && (
+          <p className="weather__key">
+            Conditions:
+            <span className="weather__value"> {this.props.description}</span>
+          </p>
+        )}
+
+        {this.props.error && (
+          <p className="weather__error">{this.props.error}</p>
+        )}
       </div>
     );
   }
 }
+
+export default Main;

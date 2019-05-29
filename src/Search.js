@@ -5,21 +5,11 @@ export default class Search extends React.Component {
     return (
       <div>
         <form onSubmit={this.props.loadWeather}>
-          <div className="form-group float-left">
-            <input
-              type="text"
-              placeholder="Which city is calling you?"
-              autoComplete="off"
-              className="form-control"
-              id="weather-search-text-input"
-            />
-          </div>
-          <input
-            type="submit"
-            value="Search"
-            className="btn btn-info float-left"
-          />
+          <input type="text" name="city" placeholder="City..." />
+          <input type="text" name="country" placeholder="Country..." />
+          <button className=" btn btn-info float-left">Search</button>
         </form>
+
         <br />
         <br />
       </div>
