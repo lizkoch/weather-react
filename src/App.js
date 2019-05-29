@@ -13,6 +13,8 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    sunrise: undefined,
+    sunset: undefined,
     error: undefined
   };
 
@@ -32,6 +34,8 @@ class App extends React.Component {
         country: response.sys.country,
         humidity: response.main.humidity,
         description: response.weather[0].description,
+        sunrise: response.sys.sunrise,
+        sunset: response.sys.sunset,
         error: ""
       });
     } else {

@@ -25,8 +25,8 @@ class Main extends Component {
 
         {this.props.humidity && (
           <p className="weather__key">
-            Humidity:
-            <span className="weather__value"> {this.props.humidity}</span>
+            Chance of rain:
+            <span className="weather__value"> {this.props.humidity}</span> %
           </p>
         )}
 
