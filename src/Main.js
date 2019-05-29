@@ -30,17 +30,10 @@ class Main extends Component {
           </p>
         )}
 
-        {this.props.sunrise && (
+        {this.props.icon && (
           <p className="weather__key">
-            Sunrise:
-            <span className="weather__value"> {this.props.sunrise}</span>
-          </p>
-        )}
-
-        {this.props.sunset && (
-          <p className="weather__key">
-            Sunset:
-            <span className="weather__value"> {this.props.sunset}</span>
+            Icon placeholder:
+            <span className="weather__value"> {this.props.icon}</span>
           </p>
         )}
 
