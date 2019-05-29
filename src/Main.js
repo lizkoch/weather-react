@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Search from "./Components/Search";
+import Search from "./Search";
 
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
@@ -41,23 +41,15 @@ export default class Main extends Component {
   };
 
   render() {
-    if (this.state.loaded) {
-      return (
-        <div className="main-weather">
-          <Search loadWeather={this.getWeather} />
-          <h2>{this.state.city}</h2>
-          <p className="main-description">{this.state.description}</p>
-          <p className="main-humidity">Chance of rain: {this.state.humidity}</p>
-          <p className="main-sunrise">Sunrise: {this.state.sunrise}</p>
-          <p className="main-sunset">Sunset: {this.state.sunset}</p>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <Search />
-        </div>
-      );
-    }
+    return (
+      <div className="main-weather">
+        <Search loadWeather={this.getWeather} />
+        <h2>{this.state.city}</h2>
+        <p className="main-description">{this.state.description}</p>
+        <p className="main-humidity">Chance of rain: {this.state.humidity}</p>
+        <p className="main-sunrise">Sunrise: {this.state.sunrise}</p>
+        <p className="main-sunset">Sunset: {this.state.sunset}</p>
+      </div>
+    );
   }
 }

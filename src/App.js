@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import City from "./Components/City";
-import Main from "./Components/Main";
+import City from "./City";
+import Main from "./Main";
 
 export default class App extends Component {
   refresh() {
