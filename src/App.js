@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
-import City from "./City";
+import InspoPic from "./InspoPic";
 import Main from "./Main";
 import Search from "./Search";
 import Title from "./Title";
+
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
 class App extends React.Component {
@@ -69,20 +70,20 @@ class App extends React.Component {
                   />
                 </div>
                 <h2>Need inspiration?</h2>
-                <City
-                  loadWeather={this.getWeather}
+                <InspoPic
+                  cityPic="src\CityPics\lisbon.jpg"
                   cityName="Lisbon, Portugal"
-                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                  cityURL="lisbon"
                 />
-                <City
-                  loadWeather={this.getWeather}
+                <InspoPic
+                  cityPic="C:\Users\Liz\Desktop\weather-react\src\CityPics\capetown.jpg"
                   cityName="Cape Town, South Africa"
-                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=cape%20town&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                  cityURL="cape%20town"
                 />
-                <City
-                  loadWeather={this.getWeather}
+                <InspoPic
+                  cityPic="src\CityPics\sydney.jpg"
                   cityName="Sydney, Australia"
-                  cityURL="https://api.openweathermap.org/data/2.5/weather?q=sydney&appid=e4cc36c73832c7c7ff16bb720a49e759&units=metric"
+                  cityURL="sydney"
                 />
               </div>
             </div>
