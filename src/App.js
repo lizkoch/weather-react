@@ -11,6 +11,9 @@ import sydney from "./CityPics/sydney.jpg";
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   state = {
     temperature: undefined,
     city: undefined,
@@ -73,7 +76,7 @@ class App extends React.Component {
                   <Title />
                 </div>
                 <div className="col-xs-7 form-container">
-                  <Search onSubmit={this.handleSearch} />
+                  <Search handleSearch={this.handleSearch} />
                   <Main
                     temperature={this.state.temperature}
                     city={this.state.city}
