@@ -4,6 +4,9 @@ import InspoPic from "./InspoPic";
 import Main from "./Main";
 import Search from "./Search";
 import Title from "./Title";
+import lisbon from "./CityPics/lisbon.jpg";
+import capetown from "./CityPics/capetown.jpg";
+import sydney from "./CityPics/sydney.jpg";
 
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
@@ -71,17 +74,17 @@ class App extends React.Component {
                 </div>
                 <h2>Need inspiration?</h2>
                 <InspoPic
-                  cityPic="/CityPics/lisbon.jpg"
+                  cityPic={lisbon}
                   cityName="Lisbon, Portugal"
                   cityURL="lisbon"
                 />
                 <InspoPic
-                  cityPic="/CityPics/capetown.jpg"
+                  cityPic={capetown}
                   cityName="Cape Town, South Africa"
                   cityURL="cape%20town"
                 />
                 <InspoPic
-                  cityPic="CityPics/sydney.jpg"
+                  cityPic={sydney}
                   cityName="Sydney, Australia"
                   cityURL="sydney"
                 />

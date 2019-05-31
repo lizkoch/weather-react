@@ -4,7 +4,7 @@ const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 export default class InspoPic extends React.Component {
   constructor(props) {
     super(props);
-    this.props = {
+    this.state = {
       cityPic: props.cityPic,
       cityName: props.cityName,
       cityURL: props.cityURL
@@ -13,11 +13,11 @@ export default class InspoPic extends React.Component {
   render() {
     return (
       <div className="col-lg-3 col-md-3">
-        <h2>{this.props.cityName}</h2>
+        <h2>{this.state.cityName}</h2>
         <p>
-          <img src={this.props.cityPic} onClick={alert("Yay!")} />
+          <img src={this.state.cityPic} onClick={console.log("Yay!")} />
         </p>
-        <div>Testing {this.props.cityURL}</div>
+        <div>Testing {this.state.cityURL}</div>
       </div>
     );
   }
