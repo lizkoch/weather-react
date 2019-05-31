@@ -10,12 +10,16 @@ export default class InspoPic extends React.Component {
       cityURL: props.cityURL
     };
   }
+  handleClick() {
+    console.log("Yay!");
+  }
+
   render() {
     return (
       <div className="col-lg-3 col-md-3">
         <h2>{this.state.cityName}</h2>
         <p>
-          <img src={this.state.cityPic} onClick={console.log("Yay!")} />
+          <img src={this.state.cityPic} onClick={this.handleClick} />
         </p>
         <div>Testing {this.state.cityURL}</div>
       </div>
