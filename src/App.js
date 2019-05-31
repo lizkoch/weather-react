@@ -39,16 +39,12 @@ class App extends React.Component {
       `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}&units=metric`
     );
     const response = await api_call.json();
-    console.log(response);
     if (city && country) {
       this.setState({
         temperature: Math.round(response.main.temp),
         city: response.name,
         country: response.sys.country,
-        humidity: response.main.humidity,
         description: response.weather[0].description,
-        sunrise: response.sys.sunrise,
-        sunset: response.sys.sunset,
         icon: response.weather[0].icon,
         error: ""
       });
