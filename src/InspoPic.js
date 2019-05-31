@@ -9,9 +9,13 @@ export default class InspoPic extends React.Component {
       cityName: props.cityName,
       countryName: props.countryName
     };
+    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
-    console.log("Yay!");
+  handleClick(e) {
+    const city = this.state.cityName;
+    const country = this.state.countryName;
+    e.preventDefault();
+    this.props.fetchWeather(city, country);
   }
 
   render() {
