@@ -13,17 +13,19 @@ const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      temperature: undefined,
+      city: undefined,
+      country: undefined,
+      humidity: undefined,
+      description: undefined,
+      sunrise: undefined,
+      sunset: undefined,
+      error: undefined
+    };
+    this.handleSearch = this.handleSearch.bind(this);
+    this.fetchWeather = this.fetchWeather.bind(this);
   }
-  state = {
-    temperature: undefined,
-    city: undefined,
-    country: undefined,
-    humidity: undefined,
-    description: undefined,
-    sunrise: undefined,
-    sunset: undefined,
-    error: undefined
-  };
 
   handleSearch(e) {
     const city = e.target.elements.city.value;
