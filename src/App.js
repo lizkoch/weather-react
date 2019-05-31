@@ -22,6 +22,18 @@ class App extends React.Component {
     error: undefined
   };
 
+  handleSearch(e) {
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+    e.preventDefault();
+    this.fetchWeather(city, country);
+  }
+
+  async fetchWeather(city, country) {
+    console.log(city);
+    console.log(country);
+  }
+
   getWeather = async e => {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
@@ -61,7 +73,7 @@ class App extends React.Component {
                   <Title />
                 </div>
                 <div className="col-xs-7 form-container">
-                  <Search loadWeather={this.getWeather} />
+                  <Search onSubmit={this.handleSearch} />
                   <Main
                     temperature={this.state.temperature}
                     city={this.state.city}
@@ -87,6 +99,7 @@ class App extends React.Component {
                   cityPic={sydney}
                   cityName="Sydney"
                   countryName="Australia"
+                  getWeather={this.getWeather}
                 />
               </div>
             </div>
