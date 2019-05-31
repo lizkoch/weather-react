@@ -17,10 +17,7 @@ class App extends React.Component {
       temperature: undefined,
       city: undefined,
       country: undefined,
-      humidity: undefined,
       description: undefined,
-      sunrise: undefined,
-      sunset: undefined,
       error: undefined
     };
     this.handleSearch = this.handleSearch.bind(this);
