@@ -35,14 +35,6 @@ class App extends React.Component {
   }
 
   async fetchWeather(city, country) {
-    console.log(city);
-    console.log(country);
-  }
-
-  getWeather = async e => {
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
-    e.preventDefault();
     const api_call = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}&units=metric`
     );
@@ -65,7 +57,7 @@ class App extends React.Component {
         error: "Please enter a city and country"
       });
     }
-  };
+  }
 
   render() {
     return (
