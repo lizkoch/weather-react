@@ -79,17 +79,19 @@ class App extends React.Component {
                   cityPic={lisbon}
                   cityName="Lisbon"
                   countryName="Portugal"
+                  fetchWeather={this.fetchWeather}
                 />
                 <InspoPic
                   cityPic={capetown}
                   cityName="Cape Town"
                   countryName="South Africa"
+                  fetchWeather={this.fetchWeather}
                 />
                 <InspoPic
                   cityPic={sydney}
                   cityName="Sydney"
                   countryName="Australia"
-                  getWeather={this.getWeather}
+                  fetchWeather={this.fetchWeather}
                 />
               </div>
             </div>
