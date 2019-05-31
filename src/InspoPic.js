@@ -7,7 +7,7 @@ export default class InspoPic extends React.Component {
     this.state = {
       cityPic: props.cityPic,
       cityName: props.cityName,
-      cityURL: props.cityURL
+      countryName: props.countryName
     };
   }
   handleClick() {
@@ -17,11 +17,12 @@ export default class InspoPic extends React.Component {
   render() {
     return (
       <div className="col-lg-3 col-md-3">
-        <h2>{this.state.cityName}</h2>
+        <h2>
+          {this.state.cityName}, {this.state.countryName}
+        </h2>
         <p>
           <img src={this.state.cityPic} onClick={this.handleClick} />
         </p>
-        <div>Testing {this.state.cityURL}</div>
       </div>
     );
   }

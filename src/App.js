@@ -75,18 +75,18 @@ class App extends React.Component {
                 <h2>Need inspiration?</h2>
                 <InspoPic
                   cityPic={lisbon}
-                  cityName="Lisbon, Portugal"
-                  cityURL="lisbon"
+                  cityName="Lisbon"
+                  countryName="Portugal"
                 />
                 <InspoPic
                   cityPic={capetown}
-                  cityName="Cape Town, South Africa"
-                  cityURL="cape%20town"
+                  cityName="Cape Town"
+                  countryName="South Africa"
                 />
                 <InspoPic
                   cityPic={sydney}
-                  cityName="Sydney, Australia"
-                  cityURL="sydney"
+                  cityName="Sydney"
+                  countryName="Australia"
                 />
               </div>
             </div>
