@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./InspoPic.css";
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
 export default class InspoPic extends React.Component {
@@ -20,7 +21,7 @@ export default class InspoPic extends React.Component {
 
   render() {
     return (
-      <div className="col-lg-3 col-md-3">
+      <div className="col-md-3 cities">
         <h2>
           {this.state.cityName}, {this.state.countryName}
         </h2>
