@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Title.css";
 
 class Title extends React.Component {
   constructor(props) {
@@ -15,8 +16,7 @@ class Title extends React.Component {
     var hours = new Date().getHours();
     var min = new Date().getMinutes();
     that.setState({
-      //Setting the value of the date time
-      date: date + "/" + month + "/" + year + " " + hours + ":" + min
+      date: date + "/" + month + "/" + year + "     " + hours + ":" + min
     });
   }
   render() {

@@ -31,7 +31,7 @@ class Main extends Component {
         {this.props.icon && (
           <p className="icon">
             Icon
-            <Icons icon={this.props.icon} size={300} />
+            <Icons icon={this.props.icon} size={200} color="#ffc107" />
           </p>
         )}
         {this.props.error && (
