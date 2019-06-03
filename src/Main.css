@@ -1,7 +1,15 @@
 .weather-info {
   font-family: "Quicksand", sans-serif;
   font-size: 24px;
+  overflow: auto;
 }
 .weather-value {
   font-weight: bold;
+}
+.column {
+  align-content: left;
+  width: 50%;
+}
+.icon {
+  float: right;
 }
