@@ -18,6 +18,7 @@ class App extends React.Component {
       city: undefined,
       country: undefined,
       description: undefined,
+      icon: undefined,
       error: undefined
     };
     this.handleSearch = this.handleSearch.bind(this);
