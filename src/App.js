@@ -56,49 +56,41 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="wrapper">
-          <div className="main">
-            <div className="container">
-              <div className="row">
-                <div className="col-xs-5 title-container">
-                  <Title />
-                </div>
-                <br />
-                <div className="col-xs-7 form-container">
-                  <Search handleSearch={this.handleSearch} />
-                  <Main
-                    temperature={this.state.temperature}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    icon={this.state.icon}
-                    error={this.state.error}
-                  />
-                </div>
-                <h2>Need inspiration?</h2>
-                <InspoPic
-                  cityPic={lisbon}
-                  cityName="Lisbon"
-                  countryName="Portugal"
-                  fetchWeather={this.fetchWeather}
-                />
-                <InspoPic
-                  cityPic={newyork}
-                  cityName="New York"
-                  countryName="USA"
-                  fetchWeather={this.fetchWeather}
-                />
-                <InspoPic
-                  cityPic={sydney}
-                  cityName="Sydney"
-                  countryName="Australia"
-                  fetchWeather={this.fetchWeather}
-                />
-              </div>
-            </div>
-          </div>
+        <div className="main container row">
+          <Title />
         </div>
+
+        <Search handleSearch={this.handleSearch} />
+        <div className="col-xs-7 form-container">
+          <Main
+            temperature={this.state.temperature}
+            city={this.state.city}
+            country={this.state.country}
+            humidity={this.state.humidity}
+            description={this.state.description}
+            icon={this.state.icon}
+            error={this.state.error}
+          />
+        </div>
+        <h2>Need inspiration?</h2>
+        <InspoPic
+          cityPic={lisbon}
+          cityName="Lisbon"
+          countryName="Portugal"
+          fetchWeather={this.fetchWeather}
+        />
+        <InspoPic
+          cityPic={newyork}
+          cityName="New York"
+          countryName="USA"
+          fetchWeather={this.fetchWeather}
+        />
+        <InspoPic
+          cityPic={sydney}
+          cityName="Sydney"
+          countryName="Australia"
+          fetchWeather={this.fetchWeather}
+        />
       </div>
     );
   }
