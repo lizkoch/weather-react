@@ -5,8 +5,8 @@ import Main from "./Main";
 import Search from "./Search";
 import Title from "./Title";
 import lisbon from "./CityPics/lisbon.jpg";
-import capetown from "./CityPics/capetown.jpg";
 import sydney from "./CityPics/sydney.jpg";
+import newyork from "./CityPics/newyork.jpg";
 
 const Api_Key = "e4cc36c73832c7c7ff16bb720a49e759";
 
@@ -63,6 +63,7 @@ class App extends React.Component {
                 <div className="col-xs-5 title-container">
                   <Title />
                 </div>
+                <br />
                 <div className="col-xs-7 form-container">
                   <Search handleSearch={this.handleSearch} />
                   <Main
@@ -83,9 +84,9 @@ class App extends React.Component {
                   fetchWeather={this.fetchWeather}
                 />
                 <InspoPic
-                  cityPic={capetown}
-                  cityName="Cape Town"
-                  countryName="South Africa"
+                  cityPic={newyork}
+                  cityName="New York"
+                  countryName="USA"
                   fetchWeather={this.fetchWeather}
                 />
                 <InspoPic
