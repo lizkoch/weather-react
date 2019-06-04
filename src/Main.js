@@ -11,7 +11,7 @@ class Main extends Component {
         <div className="column">
           {this.props.icon && (
             <p className="icon">
-              <Icons icon={this.props.icon} size={200} color="#ffc107" />
+              <Icons icon={this.props.icon} size={200} color="#ffa000" />
             </p>
           )}
         </div>
