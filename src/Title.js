@@ -24,8 +24,8 @@ class Title extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>Where is it sunny right now?</h1>
+      <div className="title">
+        <h1>Where is it sunny right now? </h1>
         <p className="date">{this.state.date}</p>
       </div>
     );
