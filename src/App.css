@@ -1,13 +1,17 @@
 .main-app {
-  padding: 20px;
+  padding: 50px;
   width: 1200px;
   height: 600px;
+  margin: auto;
+  text-align: center;
   box-sizing: border-box;
+  float: center;
 }
 h1 {
   font-family: "Pacifico", cursive;
   color: #ffffff;
   background-color: #ffa000;
+  text-align: center;
 }
 h2 {
   font-family: "Pacifico", cursive;
@@ -29,4 +33,8 @@ h2 {
 }
 .button-current {
   font-family: "Quicksand", sans-serif;
+}
+.inspiration {
+  color: white;
+  font-size: 34px;
 }

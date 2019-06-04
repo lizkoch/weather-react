@@ -72,7 +72,7 @@ class App extends React.Component {
             error={this.state.error}
           />
         </div>
-        <h2>Need inspiration?</h2>
+        <h2 className="inspiration">Need inspiration?</h2>
         <InspoPic
           cityPic={lisbon}
           cityName="Lisbon"
