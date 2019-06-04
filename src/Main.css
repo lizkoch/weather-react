@@ -2,9 +2,11 @@
   font-family: "Quicksand", sans-serif;
   font-size: 24px;
   overflow: auto;
+  align-content: center;
 }
 .weather-value {
   font-weight: bold;
+  text-align: center;
 }
 .column {
   align-content: left;
