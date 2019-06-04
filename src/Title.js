@@ -15,8 +15,11 @@ class Title extends React.Component {
     var year = new Date().getFullYear();
     var hours = new Date().getHours();
     var min = new Date().getMinutes();
+    function pad(min) {
+      return min < 10 ? "0" + min : min;
+    }
     that.setState({
-      date: date + "/" + month + "/" + year + "     " + hours + ":" + min
+      date: date + "/" + month + "/" + year + "     " + hours + ":" + pad(min)
     });
   }
   render() {
